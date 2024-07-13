@@ -1,0 +1,22 @@
+import java.util.*;
+class main
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        String str=s.nextLine();
+        boolean[] alpha=new boolean[26];
+        int ind=0,f=1;
+          for(int i=0;i<str.length();i++)
+          {
+              if(str.charAt(i)>='a'&&str.charAt(i)<='z')
+                  ind=str.charAt(i)-'a';
+              else if(str.charAt(i)>='A'&&str.charAt(i)<='Z')
+                  ind=str.charAt(i)-'A';
+              if(f==1)
+                  System.out.print("Pangram");
+              else
+                  System.out.print("Not a pangram");
+          }
+    }
+}
